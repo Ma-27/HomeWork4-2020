@@ -38,9 +38,7 @@ public class Main {
                 setter.invoke(operateMe, "闪电五连鞭！");
                 System.out.println("打印修改后的结果");
                 System.out.println(getter.invoke(operateMe));
-            } catch (IllegalAccessException e) {
-                e.printStackTrace();
-            } catch (InvocationTargetException e) {
+            } catch (IllegalAccessException | InvocationTargetException e) {
                 e.printStackTrace();
             }
         } catch (NoSuchMethodException e) {
@@ -70,10 +68,6 @@ public class Main {
         } catch (NoSuchFieldException e) {
             e.printStackTrace();
         }
-            /*
-            int privacyModifier = reflectionClass.getModifiers();
-            System.out.println(privacyModifier);
 
-             */
     }
 }
